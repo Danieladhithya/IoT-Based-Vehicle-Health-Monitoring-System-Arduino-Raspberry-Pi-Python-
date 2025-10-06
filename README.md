@@ -1,131 +1,111 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-# 🚗 Predictive Maintenance for Automobiles — IoT + ML
-
-<p align="center">
-  <strong>Intelligent vehicle health monitoring using IoT sensors, embedded systems, and machine learning.</strong><br>
-  <a href="#features">Features</a> • <a href="#architecture">Architecture</a> • <a href="#getting-started">Getting Started</a>
-</p>
-
-<p align="center">
-  <img alt="badge-license" src="https://img.shields.io/badge/license-AIT-blue.svg" />
-  <img alt="badge-python" src="https://img.shields.io/badge/python-%3E%3D3.8-blue" />
-  <img alt="badge-flask" src="https://img.shields.io/badge/flask-★-orange" />
-  <img alt="badge-sqlite" src="https://img.shields.io/badge/database-SQLite-lightgrey" />
-</p>
+Ah! Got it — you want a **clean, well-written GitHub README version** of your “Predictive Maintenance for Automobiles” project. Here’s a professional and structured version, based on your notes, suitable for GitHub:
 
 ---
 
-## 🧭 Project Overview
+# Predictive Maintenance for Automobiles — IoT + ML
 
-Predictive Maintenance for Automobiles combines **ESP32-based sensor telemetry**, **embedded firmware**, a **Flask** web dashboard, and a **Random Forest** ML model to predict vehicle faults, battery degradation, and remaining useful life (RUL). The system supports local alerts (LCD + buzzer) and remote alerts via a Telegram bot.
+Intelligent vehicle health monitoring system using IoT sensors, embedded systems, and machine learning for predictive maintenance.
 
----
-
-## 🚀 Key Features
-
-- <i class="fa-solid fa-broadcast-tower"></i> **Real-time telemetry** from ESP32 sensors  
-- <i class="fa-solid fa-robot"></i> **ML-based predictions** (Random Forest) for faults & BMS (battery)  
-- <i class="fa-solid fa-tv"></i> **Web dashboard** (Flask + Jinja2 + Bootstrap) with visualizations  
-- <i class="fa-solid fa-bell"></i> **Dual notifications:** LCD + buzzer (local) and Telegram Bot (remote)  
-- <i class="fa-solid fa-database"></i> **Data persistence:** SQLite for lightweight storage  
-- <i class="fa-solid fa-microchip"></i> **Embedded stack:** Arduino (Embedded C), ESP32, Zigbee for mesh/wireless  
+[![License](https://img.shields.io/badge/license-MIT-green)]() [![Python](https://img.shields.io/badge/Python-3.8+-blue)]() [![Flask](https://img.shields.io/badge/Flask-Framework-orange)]() [![SQLite](https://img.shields.io/badge/SQLite-DB-lightgrey)]()
 
 ---
 
-## 🏗️ Architecture & Components
+## Project Overview
+
+This project combines **ESP32-based sensor telemetry, embedded firmware, a Flask web dashboard, and a Random Forest ML model** to predict vehicle faults, battery degradation, and remaining useful life (RUL). The system supports both **local alerts** (LCD + buzzer) and **remote alerts** via a Telegram bot.
+
+---
+
+## Key Features
+
+* Real-time telemetry collection from ESP32 sensors (temperature, vibration, RPM).
+* ML-based predictions for vehicle faults and battery health using Random Forest.
+* Web dashboard built with Flask, Jinja2, and Bootstrap for real-time visualization.
+* Dual notifications: local (LCD + buzzer) and remote (Telegram Bot).
+* Data persistence via SQLite for lightweight storage.
+* Embedded firmware in Arduino (C/C++) with wireless communication using Zigbee.
+
+---
+
+## Architecture & Components
 
 ### Hardware
-- **ESP32** — IoT data collection & transmission  
-- **Sensors:** DHT11 (temp/humidity), ADXL345 (accelerometer), Oil level sensor  
-- **Power:** 12V lead-acid battery (target for BMS predictions)  
-- **UI:** LCD + Buzzer for local alerts  
-- **Comm:** Zigbee module (wireless), Telegram Bot for remote alerts
+
+* **ESP32:** IoT data collection and transmission.
+* **Sensors:** DHT11 (temperature/humidity), ADXL345 (accelerometer), Oil level sensor.
+* **Power:** 12V lead-acid battery (target for BMS predictions).
+* **UI:** LCD + Buzzer for local alerts.
+* **Communication:** Zigbee mesh network, Telegram Bot for remote alerts.
 
 ### Software
-- **Embedded:** Arduino IDE (C/C++) for ESP32 firmware  
-- **Backend:** Flask (Python) + Jinja2 templates  
-- **Frontend:** HTML, Bootstrap, jQuery for UI and charts  
-- **DB:** SQLite  
-- **ML:** Random Forest (training in Jupyter / scikit-learn)  
-- **Notifications:** Telegram Bot API
+
+* **Embedded:** Arduino IDE (C/C++) for ESP32 firmware.
+* **Backend:** Flask (Python) with Jinja2 templates.
+* **Frontend:** HTML, Bootstrap, jQuery for UI and charts.
+* **Database:** SQLite for lightweight storage.
+* **Machine Learning:** Random Forest (training using scikit-learn in Jupyter Notebook).
+* **Notifications:** Telegram Bot API.
 
 ---
 
-## 🧭 Machine Learning Model
+## Machine Learning Model
 
-- **Algorithm:** Random Forest (ensemble)  
-- **Use cases:** Predict vehicle faults, battery degradation, and estimate RUL  
-- **Typical input features:** Cycle index, discharge times, voltage/current readings, time-at-voltage, etc.
-
----
-
-## 🖼️ Visuals & Diagrams
-
-<p align="center">
-  <img src="assets/pdm1.webp" alt="Web Dashboard Preview" width="720" style="max-width:100%;"/><br>
-  <em>Figure — Web dashboard preview_1</em>
-</p>
-
-<p align="center">
-  <img src="assets/pdm2.webp" alt="Web Dashboard Preview" width="720" style="max-width:100%;"/><br>
-  <em>Figure — Web dashboard preview_2</em>
-</p>
-
-<p align="center">
-  <img src="assets/block_diagram.jpeg" alt="Block Diagram" width="720" style="max-width:100%;"/><br>
-  <em>Figure — System block diagram</em>
-</p>
-
-<p align="center">
-  <img src="assets/overview.png" alt="Overview" width="720" style="max-width:100%;"/><br>
-  <em>Figure — Working Overview</em>
-</p>
-
-<p align="center">
-  <img src="assets/flowchart.jpeg" alt="Flowchart" width="720" style="max-width:100%;"/><br>
-  <em>Figure — Data flow & alert flowchart</em>
-</p>
-
-<p align="center">
-  <img src="assets/pdm3.webp" alt="Analytics Screens" width="720" style="max-width:100%;"/><br>
-  <em>Figure — Analytics and visualizations</em>
-</p>
-
-<p align="center">
-  <img src="assets/pdm4.webp" alt="Analytics Screens" width="720" style="max-width:100%;"/><br>
-  <em>Figure — Analytics and visualizations</em>
-</p>
-
-<p align="center">
-  <img src="assets/bot_alerts.jpeg" alt="Telegram Alerts" width="720" style="max-width:100%;"/><br>
-  <em>Figure — Telegram bot alert</em>
-</p>
+* **Algorithm:** Random Forest (ensemble).
+* **Use Cases:** Predict vehicle faults, battery degradation, and estimate RUL.
+* **Input Features:** Cycle index, discharge times, voltage/current readings, time-at-voltage, etc.
 
 ---
 
-## 🛠️ Getting Started
+## Getting Started
 
-**Prereqs**
-- Python 3.8+  
-- Arduino IDE (for ESP32)  
-- pip, virtualenv (recommended)  
+### Prerequisites
 
-**Install backend dependencies**
+* Python 3.8+
+* Arduino IDE (for ESP32)
+* pip, virtualenv (recommended)
+
+### Installation
+
 ```bash
-# from repo root
+# Clone the repository
+git clone https://github.com/Danieladhithya/your-repo-name.git
+cd your-repo-name
+
+# Create and activate virtual environment
 python -m venv .venv
-source .venv/bin/activate        # Linux / macOS
-# .venv\Scripts\activate         # Windows PowerShell
+source .venv/bin/activate   # Linux/macOS
+# .venv\Scripts\activate    # Windows PowerShell
 
+# Install dependencies
 pip install -r requirements.txt
-# or
-pip install flask scikit-learn pandas jinja2 matplotlib sqlite3
+```
 
+### Running the Project
+
+```bash
 export FLASK_APP=backend/app.py
 export FLASK_ENV=development
 flask run
-# or on Windows:
+# On Windows:
 # set FLASK_APP=backend\app.py
 # flask run
+```
 
+---
+
+## Demo & Screenshots
+
+* Real-time telemetry dashboard
+* Vehicle performance analytics
+* Telegram alert notifications
+* Embedded LCD + buzzer alerts
+
+*(You can add screenshots/images here from your project)*
+
+---
+
+This version is **clean, structured, and easy to read** for GitHub visitors.
+
+If you want, I can also make a **shorter, “resume-style” README version** that’s even cleaner for recruiters or casual viewers.
+
+Do you want me to do that?
